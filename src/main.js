@@ -6,7 +6,7 @@
 import Vue from 'vue';
 import FastClick from 'fastclick';
 
-import App from '@/pages/app';
+import App from '@/moduls';
 
 import router from '@/router';
 
@@ -18,4 +18,4 @@ Vue.config.productionTip = false;
 new Vue({
     router,
     render: h => h(App)
-}).$mount('#app-box');
+}).$mount('#chan');

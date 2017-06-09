@@ -6,18 +6,18 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-const routers = [{
-    path: '*',
-    component: resolve => require(['@/pages/home'], resolve)
-}, {
-    path: '/topic',
-    name: 'topic',
-    component: resolve => require(['@/pages/topic'], resolve)
-}];
+import pc from './pc';
+import { RouterInterceptor } from '@/interceptors';
+
+const routers = [pc];
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
     mode: 'history',
     routes: routers
 });
+
+RouterInterceptor(router, Vue);
+
+export default router;

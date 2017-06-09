@@ -1,0 +1,2207 @@
+@import '../_variables.less';
+@import '../mixins/utilities.less';
+@import 'global_mixins.less';
+@import 'global_varibles.less';
+
+@color-22C4F3: #22C4F3;
+@color-ff5757: #FF5757;
+@color-666666: #666666;
+@color-464646: #464646;
+@color-999999: #999999;
+@color-a9d55c: #a9d55c;
+@color-ffa257: #ffa257;
+@color-f0f0f0: #f0f0f0;
+@color-333333: #333333;
+
+//发布会议
+.meeting-launch {
+  font-family: '黑体';
+  .item-static {
+    background: #ffffff;
+  }
+  .is-con {
+    padding: 28/100rem 0 28/100rem 0;
+    margin-left: 20/100rem;
+    border-bottom: 2/100rem solid #DDDDDD;
+    line-height: 1;
+    vertical-align: middle;
+  }
+  .i-left {
+    float: left;
+    margin-left: -10/100rem;
+    color: @color-333333;
+    margin-right: 50/100rem;
+    vertical-align: middle;
+  }
+  .i-left span {
+    font-size: 28/100rem;
+    vertical-align: middle;
+  }
+  .i-left-s {
+    margin-right: 20/100rem;
+  }
+
+  .i-right {
+    float: left;
+    font-size: 28/100rem;
+    color: @color-666666;
+    vertical-align: middle;
+  }
+  .i-left .i-r-sp {
+    vertical-align: middle;
+    line-height: 1;
+    color: @color-666666;
+  }
+  .i-select-sp {
+    vertical-align: middle;
+    text-align: right;
+    line-height: 1;
+  }
+  .i-select-date {
+    float: right;
+    margin-right: 20/100rem;
+    vertical-align: middle;
+    text-align: right;
+    line-height: 1;
+  }
+  .ml-icon-color {
+    color: @color-ff5757;
+    font-size: 15/100rem;
+    text-align: center;
+    display: inline-block;
+    margin-top: -2/100rem;
+    margin-right: 5/100rem;
+    vertical-align: middle;
+  }
+  .i-date {
+    font-size: 28/100rem;
+    border: none;
+    color: @color-666666;
+    background: #ffffff;
+    margin-right: 14/100rem;
+    line-height: 1;
+  }
+  .i-textarea {
+    min-height: 160/100rem;
+    margin-left: -6/100rem;
+  }
+  .i-textarea-tip {
+    text-align: right;
+    font-size: 24/100rem;
+    color: @color-999999;
+    max-width: 424/100rem;
+  }
+  .i-textarea-tip .red {
+    color: @color-ff5757;
+  }
+  .i-long {
+  }
+  .i-long .i-left {
+
+  }
+  .i-long .i-right {
+
+  }
+
+  .i-height-70 {
+    padding: 12/100rem 0 16/100rem 0;
+    margin-left: 34/100rem;
+  }
+  .i-height-70 .tip {
+    font-size: 24/100rem;
+    color: @color-999999;
+  }
+
+  .i-height-70-man {
+    padding: 20/100rem 0 16/100rem 0;
+  }
+
+  .i-height-70-man .tip {
+    font-size: 24/100rem;
+    line-height: 18px;
+    color: @color-999999;
+  }
+
+  .i-height-120 {
+    padding: 15/100rem 0 15/100rem 0;
+    margin-left: 0.4rem;
+    font-family: '黑体';
+  }
+  textarea {
+    border: 0px solid transparent;
+    font-size: 28/100rem;
+    vertical-align: middle;
+    color: @color-666666;
+    line-height: 1;
+    min-width: 434/100rem;
+    padding: 0;
+    -webkit-appearance: none;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: block;
+    text-align: start;
+
+  }
+  input{
+    border: 0px solid transparent;
+    font-size: 28/100rem;
+    vertical-align: middle;
+    padding-top: 2/100rem;
+    color: @color-666666;
+    line-height: 1;
+    min-width: 424/100rem;
+    -webkit-appearance: none;
+  }
+  .border-none {
+    border: 0 solid #ffffff;
+  }
+  .border-b {
+    border-bottom: 2/100rem solid #DDDDDD;
+  }
+  .border-t {
+    border-top: 2/100rem solid #DDDDDD;
+  }
+  .bg-none {
+    background: none;
+  }
+  .margin-left-none {
+    margin-left: 0;
+  }
+  .ml-man-add {
+    color: @color-22C4F3;
+    margin-right: 20/100rem;
+  }
+  .ml-man-add .iconfont {
+    font-size: 30/100rem;
+  }
+  .icon-youjiantou1 {
+    color: #CCCCCC;
+    font-size: 28/100rem;
+    vertical-align: middle;
+  }
+
+  .select-sp {
+    position: relative;
+  }
+  .cur-select {
+    margin-right: 14/100rem;
+    vertical-align: middle;
+  }
+  .select-sp select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 0rem;
+    opacity: 0;
+    //filter: alpha(opacity:0);
+    font-size: 28/100rem;
+    text-align: left;
+    width: 100%;
+  }
+  select option:hover {
+    font: 28/100rem "Microsoft YaHei";
+    color: @color-333333;
+  }
+
+}
+
+//选择会议室
+.meeting-boardroom-choose {
+  font-family: '黑体';
+  .title {
+    margin: 16/100rem 0;
+  }
+  .title .t-time {
+    border-left: 6/100rem solid @color-22C4F3;
+    font-size: 28/100rem;
+    padding: 0 20/100rem 0 14/100rem;
+    color: @color-666666;
+  }
+
+  .time {
+    margin: 0 20/100rem;
+    position: relative;
+  }
+  .time .time-l {
+    display: inline-block;
+    color: #ffffff;
+    width: 49%;
+    height: auto;
+    text-align: center;
+    position: relative;
+  }
+  .time .time-r {
+    display: inline-block;
+    color: #ffffff;
+    width: 49%;
+    height: auto;
+    text-align: center;
+    position: relative;
+  }
+  .time .time-month {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    font-size: 28/100rem;
+  }
+
+  .list {
+    margin-top: 25/100rem;
+    border-top: 2/100rem solid #DDDDDD;
+    border-bottom: 2/100rem solid #DDDDDD;
+  }
+
+  .list .item {
+    background: #ffffff;
+  }
+  .item-con {
+    margin-left: 20/100rem;
+    padding: 22/100rem 20/100rem 22/100rem 0/100rem;
+    border-bottom: 2/100rem solid #DDDDDD;
+  }
+
+  .item-con .i-top {
+    font-size: 32/100rem;
+    color: @color-333333;
+  }
+  .item-con .i-c-subtitle {
+    font-size: 22/100rem;
+    color: #999999;
+    margin-top: 8/100rem;
+
+    padding-left: 46/100rem;
+  }
+
+  .item-con .i-bottom {
+    font-size: 22/100rem;
+    color: #999999;
+    padding-left: 46/100rem;
+    margin-top: 21/100rem;
+  }
+  .item-con .i-bottom .iconfont {
+    font-size: 22/100rem;
+    color: @color-22C4F3;
+  }
+
+  .i-r-tip {
+    -moz-border-radius: 30/100rem;
+    -webkit-border-radius: 30/100rem;
+    padding: 2/100rem 20/100rem  0/100rem 20/100rem;
+    font-size: 22/100rem;
+    color: @color-22C4F3;
+    border-radius: 30/100rem;
+    border: 1px solid @color-22C4F3;
+  }
+
+  .error-tip {
+    padding-top: 20/100rem;
+    text-align: center;
+    font-size: 24/100rem;
+    line-height: 36/100rem;
+    color: @color-999999;
+    font-family: 'PingFang-SC-Regular';
+    border-top: 2/100rem solid #DDDDDD;
+  }
+  .icon-xuanzhong-mt {
+    padding: 0 15/100rem 0 0;
+  }
+  .icon-xuanzhong-mt:before {
+    color: @color-22C4F3;
+    font-size: 32/100rem;
+  }
+  .icon-weixuan {
+    padding: 0 15/100rem 0 0;
+  }
+  .icon-weixuan:before {
+    color: #C9C9C9;
+    font-size: 32/100rem;
+  }
+  .i-right {
+    float: right;
+  }
+  .meeting-choose-button {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+
+  select {
+    border: 0 solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    font-size: 28/100rem;
+  }
+  .select-color {
+    color: @color-22C4F3
+  }
+}
+
+//会议室详情
+.meeting-boardroom-detail {
+  font-family: '黑体';
+  .mbd-top {
+    background: #464646;
+    color: #ffffff;
+    padding: 23/100rem 20/100rem 33/100rem 20/100rem;
+  }
+  .mbd-top .title {
+    font-size: 32/100rem;
+  }
+  .mbd-top .subtitle {
+    font-size: 24/100rem;
+    margin-top: 10/100rem;
+  }
+  .mbd-list {
+    position: relative;
+  }
+  .mbd-list:after, .mbd-list:before {
+    border: solid transparent;
+    content: ' ';
+    height: 0;
+    position: absolute;
+    width: 0;
+  }
+  .mbd-list:after {
+    border-width: 30/100rem;
+    border-bottom-color: #ffffff;
+    top: -50/100rem;
+    left: 20/100rem;
+  }
+
+  .mbd-item {
+    background: #ffffff;
+  }
+  .item-con {
+    margin-left: 20/100rem;
+    padding: 26/100rem 20/100rem 28/100rem 0/100rem;
+    border-bottom: 2/100rem solid #DDDDDD;
+    vertical-align: middle;
+    line-height: 1;
+  }
+  .i-c-icon {
+    color: @color-22C4F3;
+    font-size: 26/100rem;
+    vertical-align: middle;
+    margin-right: 10/100rem;
+  }
+  .i-c-title {
+    color: @color-333333;
+    font-size: 28/100rem;
+    vertical-align: middle;
+  }
+  .i-c-other {
+    color: @color-666666;
+    font-size: 28/100rem;
+    vertical-align: middle;
+    margin-top: 3/100rem;
+  }
+  .i-c-bottom {
+    color: @color-999999;
+    font-size: 22/100rem;
+    margin-top: 10/100rem;
+    vertical-align: middle;
+    line-height: 34/100rem;
+  }
+  .i-c-bottom span {
+    vertical-align: middle;
+  }
+
+  .mbd-my {
+    padding: 25/100rem 20/100rem 13/100rem 20/100rem;
+    font-size: 22/100rem;
+    color: @color-999999;
+    vertical-align: middle;
+  }
+  .mbd-my .num {
+    color: @color-22C4F3;
+  }
+  .mbd-my .mbd-my-icon {
+    color: @color-22C4F3;
+    font-size: 22/100rem;
+    margin-right: 5/100rem;
+    vertical-align: middle;
+  }
+  .mbd-result {
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    vertical-align: middle;
+  }
+  .mbd-result .i-c-icon {
+    color: @color-999999;
+    margin-right: 5/100rem;
+    font-size: 22/100rem;
+    margin-top: 4/100rem;
+    display: inline;
+    vertical-align: middle;
+  }
+
+  .mbd-result .i-c-title {
+    font-size: 32/100rem;
+  }
+
+  .mbd-result .tip {
+    -moz-border-radius: 30/100rem;
+    -webkit-border-radius: 30/100rem;
+    padding: 2/100rem 20/100rem  0/100rem 20/100rem;
+    font-size: 22/100rem;
+    color: @color-22C4F3;
+    border-radius: 30/100rem;
+    border: 1px solid  @color-999999;
+  }
+
+  .mbd-result .notstarted {
+    color: @color-22C4F3;
+    border: 1px solid @color-22C4F3;
+  }
+  .mbd-result .notstarted {
+    color: @color-22C4F3;
+    border: 1px solid @color-22C4F3;
+  }
+  .mbd-result .underway {
+    color: @color-a9d55c;
+    border: 1px solid @color-a9d55c;
+  }
+  .mbd-result .complete {
+    color: @color-999999;
+    border: 1px solid @color-999999;
+  }
+  .mbd-result .i-c-wo {
+    color: @color-22C4F3;
+    font-size: 28/100rem;
+    margin-left: 10/100rem;
+    margin-top: 4/100rem;
+    vertical-align: middle;
+
+  }
+
+  .mbd-calendar {
+    background: #ffffff;
+    margin: 20/100rem  15/100rem  0/100rem  15/100rem;
+    border-radius: 8/100rem;
+  }
+  .mbd-calendar .calendar-head {
+    padding: 26/100rem 20/100rem;
+    background: @color-22C4F3;
+    line-height: 100%;
+    color: #ffffff;
+    font-size: 28/100rem;
+    border-top-left-radius: 8/100rem;
+    -moz-border-radius-topleft: 8/100rem;
+    -webkit-border-top-left-radius: 8/100rem;
+    border-top-right-radius: 8/100rem;
+    -moz-border-radius-topright: 8/100rem;
+    -webkit-border-top-right-radius: 8/100rem;
+  }
+  .mbd-calendar .calendar-head .head-fl {
+    float: left;
+    vertical-align: middle;
+  }
+  .mbd-calendar .calendar-head .head-fr {
+    float: right;
+  }
+  .mbd-calendar .calendar-head .nowtime {
+    margin-left: 10/100rem;
+    vertical-align: middle;
+  }
+  .head-fr .selected {
+    background: #ffffff;
+    color: @color-22C4F3;
+  }
+  .c-h-icon {
+    color: #ffffff;
+    margin-right: 20/100rem;
+    vertical-align: middle;
+  }
+  .c-bt {
+    padding: 7/100rem 27/100rem;
+    border: 1px solid #ffffff;
+    font-size: 22/100rem;
+    background: @color-22C4F3;
+    color: #ffffff;
+  }
+
+  .c-bt-l {
+    border-top-left-radius: 8/100rem;
+    -moz-border-radius-topleft: 8/100rem;
+    -webkit-border-top-left-radius: 8/100rem;
+    border-bottom-left--radius: 8/100rem;
+    -moz-border-radius-bottomleft: 8/100rem;
+    -webkit-border-bottom-left-radius: 8/100rem;
+  }
+  .c-bt-r {
+    border-top-right-radius: 8/100rem;
+    -moz-border-radius-topright: 8/100rem;
+    -webkit-border-top-right-radius: 8/100rem;
+    border-bottom-right-radius: 8/100rem;
+    -moz-border-radius-bottomright: 8/100rem;
+    -webkit-border-bottom-right-radius: 8/100rem;
+  }
+  .mbd-calendar .work {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .mbd-calendar .month-date {
+    position: relative;
+  }
+  .mbd-calendar .month-date .cd-fl {
+    position: absolute;
+    left: 10/100rem;
+    top: 45%;
+  }
+  .mbd-calendar .month-date .cd-fr {
+    position: absolute;
+    right: 10/100rem;
+    top: 45%;
+  }
+  .mbd-calendar .month-date .iconfont {
+    color: @color-22C4F3;
+    padding: 19/100rem 16/100rem;
+    font-size: 16/100rem;
+  }
+  .mbd-calendar .month-date .date-datil {
+    padding: 10/100rem 60/100rem;
+  }
+  .mbd-calendar .month-date .d-item {
+    font-size: 22 /100rem;
+    margin: 10/100rem 0;
+    color: @color-333333;
+    float: left;
+    width: 14%;
+    text-align: center;
+    letter-spacing: -1/100rem;
+  }
+  .mbd-calendar .month-date .d-item span {
+    width: 40/100rem;
+    height: 40/100rem;
+    text-align: center;
+    line-height: 40/100rem;
+    display: block;
+    margin-left: 15/100rem
+  }
+  .mbd-calendar .month-date .curdate {
+    color: @color-22C4F3;
+  }
+  .mbd-calendar .month-date .otherdate {
+    color: #DDDDDD;
+  }
+  .mbd-calendar .month-date .selectdate {
+    background: @color-22C4F3;
+    color: #ffffff;
+    border-radius: 100%;
+  }
+  .mbd-calendar .month-date .d-item i {
+    font-style: normal;
+  }
+
+  .mbd-calendar .week-date {
+    position: relative;
+  }
+  .mbd-calendar .week-date .cd-fl {
+    position: absolute;
+    left: 10/100rem;
+    top: 39/100rem;
+    vertical-align: middle;
+  }
+  .mbd-calendar .week-date .cd-fr {
+    position: absolute;
+    right: 10/100rem;
+    top: 39/100rem;
+    vertical-align: middle;
+  }
+  .mbd-calendar .week-date .iconfont {
+    color: @color-22C4F3;
+    padding: 19/100rem 16/100rem;
+    font-size: 16/100rem;
+    vertical-align: middle;
+  }
+  .mbd-calendar .week-date .date-datil {
+    padding: 30/100rem 60/100rem 30/100rem 60/100rem;
+  }
+  .mbd-calendar .week-date .d-item {
+    font-size: 22/100rem;
+    margin: 10/100rem 0;
+    color: @color-333333;
+    float: left;
+    width: 14%;
+    text-align: center;
+    letter-spacing: -1/100rem;
+  }
+  .mbd-calendar .week-date .d-item span {
+    width: 40/100rem;
+    height: 40/100rem;
+    text-align: center;
+    line-height: 40/100rem;
+    display: block;
+    margin-left: 15/100rem;
+  }
+  .mbd-calendar .week-date .curdate {
+    color: @color-22C4F3;
+  }
+  .mbd-calendar .week-date .otherdate {
+    color: #DDDDDD;
+  }
+  .mbd-calendar .week-date .selectdate {
+    background: @color-22C4F3;
+    color: #ffffff;
+    border-radius: 100%;
+  }
+  .mbd-calendar .week-date .d-item i {
+    font-style: normal;
+  }
+
+  .mbd-calendar .week {
+    margin-top: 5/100rem;
+    padding: 14/100rem 60/100rem  7/100rem 60/100rem;
+    border-bottom: 2/100rem solid #DDDDDD;
+    border-top: 2/100rem solid #DDDDDD;
+  }
+  .mbd-calendar .week .w-item {
+    font-size: 22/100rem;
+    color: @color-666666;
+    float: left;
+    width: 14%;
+    text-align: center;
+    letter-spacing: -1/100rem;
+  }
+
+  .mbd-calendar .work .por {
+    overflow: hidden;
+    padding: 12/100rem 0;
+    color: @color-666666;
+    position: relative;
+  }
+  .mbd-calendar .work .selected {
+    background: @color-22C4F3;
+    color: #ffffff;
+  }
+
+  .mbd-calendar .work .work_date td div {
+    height: auto;
+    line-height: 70/100rem;
+    width: 14.28%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .mbd-calendar .work .bd_b:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 0px solid #dfdfdf;
+    -webkit-transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+  }
+  .mbd-calendar .work thead {
+    border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 20/100rem;
+    .por {
+      line-height: 40/100rem;
+      font-family: '宋体';
+    }
+  }
+
+  .work_date th, .work_date td {
+    text-align: center;
+    vertical-align: middle;
+    color: @color-333333;
+  }
+
+  .border-bottom {
+    border-bottom: 2/100rem solid #DDDDDD;
+  }
+
+  .mt-6 {
+    width: 380/100rem;
+    text-align: right
+  }
+
+}
+
+//预订会议室
+.meeting-boardroom-reserve {
+  .mbr-top {
+    background: #464646;
+    color: #ffffff;
+    padding: 22/100rem 20/100rem 22/100rem 30/100rem;
+    position: relative;
+  }
+  .mbr-top .title {
+    font-size: 32/100rem;
+  }
+  .mbr-top .subtitle {
+    margin-top: 10/100rem;
+    font-size: 24/100rem;
+  }
+  .jiantu-position {
+    position: absolute;
+    right: 20/100rem;
+    top: 50%;
+    color: #ffffff;
+    font-size: 30/100rem;
+    margin-top: -15/100rem
+  }
+}
+
+//会议详情
+.meeting-detail {
+  font-family: '黑体';
+  .mtd-title {
+    background: #ffffff;
+  }
+  .mtd-t-con {
+    margin-left: 10/100rem;
+    padding: 26/100rem 20/100rem 26/100rem 10/100rem;
+    border-bottom: 2/100rem solid #DDDDDD;
+  }
+  .mtd-title .title {
+    font-size: 32/100rem;
+    color: @color-333333;
+  }
+  .mtd-title .title .title-l {
+    float: left;
+    width: 80%;
+  }
+  .mtd-title .title .title-r {
+    float: right;
+    width: 20%;
+    text-align: right;
+  }
+  .mtd-title .man {
+    font-size: 22/100rem;
+    color: @color-999999;
+    margin-top: 10/100rem;
+  }
+
+  .mtd-state-tip {
+  }
+
+  .mtd-title .mtd-state-tip {
+    -moz-border-radius: 30/100rem;
+    -webkit-border-radius: 30/100rem;
+    padding: 2/100rem 20/100rem  0/100rem 20/100rem;
+    font-size: 22/100rem;
+    color: @color-22C4F3;
+    border-radius: 30/100rem;
+    border: 1px solid @color-999999;
+  }
+
+  .mtd-title .notstarted {
+    color: @color-22C4F3;
+    border: 1px solid @color-22C4F3;
+  }
+  .mtd-title .notstarted {
+    color: @color-22C4F3;
+    border: 1px solid @color-22C4F3;
+  }
+  .mtd-title .underway {
+    color: @color-a9d55c;
+    border: 1px solid @color-a9d55c;
+  }
+  .mtd-title .complete {
+    color: @color-999999;
+    border: 1px solid @color-999999;
+  }
+  .mbd-list {
+    border-bottom: 2/100rem solid #DDDDDD;
+  }
+  .mbd-item {
+    background: #ffffff;
+  }
+  .item-con {
+    margin-left: 10/100rem;
+    padding: 26/100rem 20/100rem 28/100rem 10/100rem;
+    border-bottom: 2/100rem solid #DDDDDD;
+    vertical-align: middle;
+    line-height: 1;
+  }
+  .i-c-icon {
+    color: @color-22C4F3;
+    font-size: 28/100rem;
+    vertical-align: middle;
+    margin-right: 10/100rem;
+  }
+  .i-c-title {
+    color: @color-333333;
+    font-size: 28/100rem;
+    vertical-align: middle;
+  }
+  .i-c-other {
+    color: @color-666666;
+    font-size: 28/100rem;
+    margin-top: 3/100rem;
+  }
+
+  .mtd-all-num {
+    margin-left: 10/100rem;
+    padding: 20/100rem 20/100rem 10/100rem 10/100rem;
+    font-size: 22/100rem;
+    color: @color-999999;
+    vertical-align: middle;
+  }
+  .mtd-all-num .all-num-icon {
+    color: @color-22C4F3;
+    font-size: 22/100rem;
+    margin-right: 10/100rem;
+    vertical-align: middle;
+  }
+  .mtd-all-num .num {
+    color: @color-22C4F3;
+  }
+
+  .mtd-man {
+    padding: 20/100rem 20/100rem 20/100rem 20/100rem;
+    background: #ffffff;
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+  }
+  .mtd-man .man-item {
+    border: 1px solid #464646;
+    -webkit-border-radius: 8/100rem;
+    -moz-border-radius: 8/100rem;
+    border-radius: 8/100rem;
+  }
+  .mtd-man .man-item .item {
+    float: left;
+    width: 25%;
+    font-size: 24/100rem;
+    color: @color-666666;
+    text-align: center;
+    padding: 9/100rem 0;
+  }
+  .mtd-man .man-item .item-first {
+    border-top-left-radius: 4/100rem;
+    -moz-border-radius-topleft: 4/100rem;
+    -webkit-border-top-left-radius: 4/100rem;
+    border-bottom-left-radius: 4/100rem;
+    -moz-border-radius-bottomleft: 4/100rem;
+    -webkit-border-bottom-left-radius: 4/100rem;
+  }
+
+  .mtd-man .man-item .item-last {
+    border-top-right-radius: 4/100rem;
+    -moz-border-radius-topright: 4/100rem;
+    -webkit-border-top-right-radius: 4/100rem;
+    border-bottom-right-radius: 4/100rem;
+    -moz-border-radius-bottomright: 4/100rem;
+    -webkit-border-bottom-right-radius: 4/100rem;
+  }
+
+  .mtd-man .man-item .item .num {
+    font-size: 24/100rem;
+  }
+  .mtd-man .man-item .item-b-r {
+    border-right: 1px solid #464646;
+  }
+
+  .mtd-man .man-item .current {
+    background: #464646;
+    color: #ffffff;
+  }
+  .mtd-man-list {
+    padding: 20/100rem 28/100rem 20/100rem 28/100rem;
+    background: #ffffff;
+    margin-top: 20/100rem;
+    border-top: 2/100rem solid #DDDDDD;
+    border-bottom: 2/100rem solid #DDDDDD;
+  }
+  .mtdmanlistother {
+    padding: 20/100rem 0/100rem 20/100rem 28/100rem;
+  }
+
+  .man-list-btn {
+    margin-top: 20/100rem;
+  }
+  .man-list-btn .m-l-btn {
+    padding: 10/100rem 30/100rem;
+    font-size: 24/100rem;
+    border: 1px solid @color-22C4F3;
+    color: @color-22C4F3;
+    border-radius: 30/100rem;
+  }
+  .man-list-btn .selected {
+    background: @color-22C4F3;
+    color: #ffffff;
+  }
+
+  .mtd-cancel-meeting {
+    padding: 30/100rem 0;
+    background: #ffffff;
+    margin-top: 20/100rem;
+    border-top: 2/100rem solid #DDDDDD;
+    border-bottom: 2/100rem solid #DDDDDD;
+  }
+  .mtd-cancel-meeting-con {
+    line-height: 1;
+  }
+  .c-m-title {
+    border-left: 6/100rem solid @color-22C4F3;
+    font-size: 28/100rem;
+    color: @color-333333;
+    margin-right: 30/100rem;
+    padding-left: 20/100rem;
+    display: block;
+    float: left;
+  }
+  .c-m-con {
+    display: block;
+    float: left;
+    width: 450/100rem;
+    font-size: 28/100rem;
+    color: @color-666666;
+  }
+
+  .mtd-floating-button {
+    color: #fff;
+    position: fixed;
+    right: 20/100rem;
+    bottom: 110/100rem;
+    width: 80/100rem;
+    height: 80/100rem;
+    line-height: 80/100rem;
+    border-radius: 50%;
+    z-index: 1500;
+    overflow: hidden;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkitbox-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    background-color: #00A5E2;
+    opacity: 0.8;
+    text-align: center;
+  }
+
+  .mtd-floating-operation {
+    color: #fff;
+    position: fixed;
+    right: 20/100rem;
+    bottom: 110/100rem;
+    padding: 0 22/100rem  0 33/100rem;
+    height: 80/100rem;
+    border-radius: 40/100rem;
+    z-index: 1500;
+    overflow: hidden;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    //display: -webkit-box;
+    //display: -ms-flexbox;
+    //display: -webkit-flex;
+    //display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    background-color: #00A5E2;
+    opacity: 0.8;
+
+  }
+  .mtdbuttonnone {
+    bottom: 0/100rem;
+  }
+
+  .f-o-item {
+    padding: 22/100rem;
+    height: 82/100rem;
+    text-align: center;
+    font-size: 22/100rem;
+    padding-top: 8/100rem;
+    float: left;
+  }
+  .f-o-item .iconfont {
+    font-size: 22/100rem;
+  }
+  .mtd-state-img {
+    position: absolute;
+    right: 20/100rem;
+    top: 90/100rem;
+    width: 140/100rem;
+    height: 140/100rem;
+    z-index: 1500;
+    overflow: hidden;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  .icon-back {
+    height: 80/100rem;
+    text-align: center;
+    font-size: 22/100rem;
+    padding-top: 20/100rem;
+    float: left;
+  }
+
+  .border-bottom {
+    border-bottom: 2/100rem solid #DDDDDD;
+  }
+
+}
+
+//请假
+.meeting-askfor-leave {
+  font-family: '黑体';
+  .mal-title {
+    padding: 14/100rem 0;
+  }
+  .mal-title .title-con {
+    padding: 0 20/100rem;
+    border-left: 6/100rem solid @color-22C4F3;
+    font-size: 28/100rem;
+    color: @color-666666;
+  }
+  .mal-con {
+    border-top: 2/100rem solid #DDDDDD;
+
+  }
+  .mal-textarea {
+    width: 100%;
+    min-height: 300/100rem;
+    border: 0 solid #ffffff;
+    padding: 20/100rem 20/100rem 20/100rem 28/100rem;
+    font-size: 28/100rem;
+    border-radius: 0;
+    border-bottom: 2/100rem solid #DDDDDD;
+    outline: none;
+    resize: none;
+
+  }
+  .mal-btn {
+    width: 100%;
+  }
+  .mal-list {
+    padding: 27/100rem 20/100rem;
+    color: @color-666666;
+    font-size: 28/100rem;
+    background: #ffffff;
+    border-bottom: 2/100rem solid #DDDDDD;
+    border-top: 2/100rem solid #DDDDDD;
+  }
+  .mal-list .iconfont {
+    color: @color-999999;
+  }
+
+  .btn-select {
+    position: relative;
+    display: inline-block;
+    font-size: 28/100rem;
+    color: @color-333333;
+    width: 100%;
+    padding: 27/100rem 20/100rem;
+    background: #ffffff;
+    border-bottom: 2/100rem solid #DDDDDD;
+    border-top: 2/100rem solid #DDDDDD;
+    vertical-align: middle;
+    line-height: 1;
+  }
+  .btn-select .cur-select {
+  }
+  .btn-select:hover .cur-select {
+
+  }
+  .btn-select select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 0rem;
+    opacity: 0;
+    //filter: alpha(opacity:0);
+    font-size: 28/100rem;
+    text-align: left;
+    width: 100%;
+  }
+  .btn-select select option {
+
+  }
+  .btn-select select option:hover {
+    font: 28/100rem "Microsoft YaHei";
+    color: @color-333333;
+  }
+  .btn-select span {
+    font-size: 28/100rem;
+    color: @color-999999;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .i-textarea-tip {
+    text-align: right;
+    font-size: 24/100rem;
+    color: @color-999999;
+    padding-right: 0.2rem;
+  }
+  .i-textarea-tip .red {
+    color: @color-ff5757;
+  }
+
+}
+
+.meeting-head {
+
+}
+
+.meeting-head .head-eidt {
+  display: block;
+  width: 80/100rem;
+  margin: 0 auto 0 auto;
+}
+
+.meeting-head .head-add {
+  display: none
+}
+
+.meeting-head .head-img {
+  border-radius: 100%;
+  width: 80/100rem;
+  height: 80/100rem;
+  position: relative;
+}
+
+.meeting-head .head-img img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  border-radius: 100%;
+}
+
+.meeting-head .head-img .head-icon-delect {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: @color-ff5757;
+  font-size: 30/100rem;
+}
+
+.meeting-head .head-name {
+  width: 80/100rem;
+  text-align: center;
+  font-size: 22/100rem;
+  color: @color-666666;
+  margin-top: 3/100rem;
+  height: 26/100rem;
+  overflow: hidden;
+}
+
+.meeting-head .add .head-eidt {
+  display: none;
+}
+
+.meeting-head .add .head-add {
+  display: block;
+}
+
+.meeting-head .hided {
+  height: 115/100rem;
+}
+
+.meeting-head .add .head-add .head-img .head-icon-add {
+  display: block;
+  font-size: 44/100rem;
+  color: #DDDDDD;
+  text-align: center;
+  width: 80/100rem;
+  height: 80/100rem;
+  border: 1px solid #DDDDDD;
+  border-radius: 100%;
+  line-height: 80/100rem;
+}
+
+.meeting-head .head-eidt .head-img .head-icon-add {
+  display: block;
+  font-size: 44/100rem;
+  color: #DDDDDD;
+  width: 80/100rem;
+  height: 80/100rem;
+  border: 1px solid #DDDDDD;
+  border-radius: 100%;
+  line-height: 80/100rem;
+}
+
+.meeting-head .head-li {
+  float: left;
+  text-align: center;
+  margin-right: 17/100rem;
+  margin-bottom: 10/100rem;
+
+}
+
+.mt-headdiv {
+  float: left;
+  text-align: center;
+  width: 20%;
+  margin-bottom: 20/100rem;
+}
+
+.meeting-head-more {
+  margin: 10/100rem 20/100rem 0 0/100rem;
+  text-align: center;
+}
+
+.meeting-head-more .more-line {
+  border-top: 2/100rem solid #DDDDDD;
+}
+
+.meeting-head-more .more-icon {
+  display: block;
+  width: 60/100rem;
+  background: #ffffff;
+  margin: -15/100rem auto 0 auto;
+  color: #DDDDDD;
+}
+
+.meeting-head-more .more-text {
+  color: @color-999999;
+  font-size: 22/100rem;
+  padding: 0/100rem 0;
+}
+
+.meeting-head .head-li-none {
+  color: @color-666666;
+  font-size: 24/100rem;
+  padding: 20/100rem 0;
+  text-align: center;
+}
+
+.head-list {
+  border-bottom: 1px solid #DDDDDD;
+  margin-bottom: 20/100rem;
+  padding-bottom: 10/100rem;
+}
+
+.head-list .head-img {
+  float: left;
+  margin-top: 4/100rem;
+}
+
+.head-list .head-con {
+  float: left;
+  width: 480/100rem;
+  margin-left: 20/100rem;
+  padding: 16/100rem 0;
+}
+
+.head-list .head-con .head-con-name {
+  font-size: 22/100rem;
+  color: @color-333333;
+}
+
+.head-list .head-con .head-con-text {
+  font-size: 24/100rem;
+  color: @color-666666;
+}
+
+//我参与的&我发起的
+.meeting-my-join {
+  font-family: "黑体";
+  .meeting-tab {
+    width: 100%;
+    height: 90/100rem;
+    background-color: #ffffff
+  }
+  .meeting-tab span {
+    display: block;
+    width: 33.3%;
+    line-height: 90/100rem;
+    font-size: 32/100rem;
+    color: @color-666666;
+    float: left;
+    text-align: center;
+  }
+  .meeting-tab span.meeting-tab-active {
+    display: block;
+    color: #22C4F3;
+    line-height: 86/100rem;
+    border-bottom: solid 5/100rem;
+    border-bottom-color: #22C4F3;
+  }
+  .meeting-list {
+    margin-top: 20/100rem;
+    width: 100%;
+  }
+
+  .myj-list {
+
+    border-top: 2/100rem solid #DDDDDD;
+  }
+  .myj-list .item {
+    border-bottom: 2/100rem solid #DDDDDD;
+    padding: 18/100rem 20/100rem;
+    background: #ffffff;
+    line-height: 1;
+    vertical-align: middle;
+  }
+  .item-left {
+    width: 98/100rem;
+    height: 102/100rem;
+    border: 1px solid @color-22C4F3;
+    border-radius: 16/100rem;
+    -webkit-border-radius: 16/100rem;
+    -moz-border-radius: 16/100rem;
+    float: left;
+    line-height: 1;
+    vertical-align: middle;
+  }
+  .item-left .i-l-top {
+    margin-top: 16/100rem;
+    padding-top: 6/100rem;
+    font-size: 32/100rem;
+    text-align: center;
+    color: @color-22C4F3;
+    border-top: 2/100rem solid @color-22C4F3;
+    line-height: 1;
+    vertical-align: middle;
+  }
+  .item-left .i-l-con {
+    padding-top: 4/100rem;
+    font-size: 22/100rem;
+    color: @color-999999;
+    line-height: 1;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .item-right {
+    float: left;
+    padding: 15/100rem 0 0/100rem 0;
+    margin-left: 20/100rem;
+    width: 482/100rem;
+  }
+  .item-right .i-r-top {
+    font-size: 32/100rem;
+    color: @color-333333;
+    line-height: 1;
+  }
+
+  .item-right .i-r-bottom {
+    margin-top: 15/100rem;
+    font-size: 24/100rem;
+    color: @color-999999;
+    vertical-align: middle;
+    line-height: 1;
+  }
+  .item-right .i-r-bottom .i-r-b-icon {
+    font-size: 21/100rem;
+    color: @color-999999;
+  }
+
+  .item-right .i-r-bottom span {
+    vertical-align: middle;
+  }
+
+  .tip {
+    vertical-align: middle;
+    line-height: 1;
+  }
+  .tip .icon-xiaoyuandian {
+    font-size: 15/100rem;
+  }
+  .tip span {
+    font-size: 22/100rem;
+    color: @color-999999;
+    float: left;
+    vertical-align: middle;
+    line-height: 1;
+  }
+  .tip i {
+    display: block;
+    width: 10/100rem;
+    height: 10/100rem;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    margin-top: 6/100rem;
+    background: @color-999999;
+    float: left;
+    margin-right: 4/100rem;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .bgred {
+    background: @color-ff5757 !important;
+  }
+
+  .meeting-list ul {
+    border-top: 2/100rem solid #DDDDDD;
+    border-bottom: 2/100rem solid #DDDDDD;
+  }
+  .meeting-list li {
+    display: block;
+    width: 100%;
+    height: 140/100rem;
+    background-color: #ffffff;
+    margin-bottom: 2/100rem;
+    border-bottom: 2/100rem solid #DDDDDD;
+  }
+  .meeting-list-cal {
+    float: left;
+    height: 100%;
+    padding-left: 30/100rem;
+    padding-top: 20/100rem;
+    margin-right: 22/100rem;
+  }
+  .meeting-list-cal-top {
+    -moz-border-radius: 16/100rem 16/100rem 0 0;
+    -webkit-border-radius: 16/100rem 16/100rem 0 0;
+    border-radius: 16/100rem 16/100rem 0 0;
+    height: 20/100rem;
+    width: 90/100rem;
+    border: solid 2/100rem;
+    border-color: #22C4F3;
+  }
+  .meeting-list-cal-main {
+    -moz-border-radius: 0 0 16/100rem 16/100rem;
+    -webkit-border-radius: 0 0 16/100rem 16/100rem;
+    border-radius: 0 0 16/100rem 16/100rem;
+    height: 72/100rem;
+    width: 90/100rem;
+    border: solid 2/100rem;
+    border-top: none;
+    border-color: #22C4F3;
+    padding-top: 6/100rem;
+  }
+  .meeting-list-cal-main-date {
+    display: block;
+    color: #22C4F3;
+    font-size: 32/100rem;
+    text-align: center;
+    font-family: "Arial";
+    margin-top: -5/100rem;
+  }
+  .meeting-list-cal-main-week {
+    display: block;
+    color: #999999;
+    font-size: 20/100rem;
+    text-align: center;
+    margin-top: -10/100rem;
+  }
+  .meeting-list-title {
+    font-size: 32/100rem;
+    padding-top: 22/100rem;
+  }
+  .meeting-list-abstract {
+    padding-top: 22/100rem;
+    font-size: 22/100rem;
+    color: #999999;
+  }
+  .meeting-list-abstract i {
+    margin-right: 8/100rem;
+    line-height: 24/100rem;
+    font-size: 18/100rem;
+    vertical-align: middle;
+  }
+  .meeting-list-abstract .meeting-font-abstract {
+    vertical-align: middle;
+    margin-right: 24/100rem;
+  }
+  .meeting-font-abstract .meeting-time {
+    vertical-align: middle;
+  }
+  .meeting-font-abstract .meeting-info {
+    vertical-align: middle;
+  }
+  .meeting-list-status {
+    color: #999999;
+    vertical-align: middle;
+    padding-right: 10/100rem;
+    margin-top: -5/100rem;
+  }
+  .meeting-list-status i {
+    vertical-align: middle;
+    line-height: 32/100rem;
+    padding-bottom: 11/100rem;
+    font-size: 10/100rem;
+  }
+  .meeting-list-status span {
+    vertical-align: middle;
+    font-size: 24/100rem;
+    line-height: 32/100rem;
+  }
+  .colorred {
+    color: @color-ff5757;
+  }
+
+}
+
+//查询会议室
+.meeting-boardroom-query {
+  font-family: 'Microsoft Yahei';
+  .meeting-query-head {
+    position: fixed;
+    top: 0;
+    background-color: #494949;
+    width: 100%;
+    height: 90/100rem;
+
+  }
+  .meeting-query-bar {
+    width: 100%;
+    height: 58/100rem;
+    margin-top: 16/100rem;
+  }
+  .meeting-icon-zuojiantou {
+    display: block;
+    float: left;
+    width: 8%;
+    color: #999999;
+    text-align: center;
+    line-height: 58/100rem;
+    font-size: 24/100rem;
+  }
+  .meeting-search {
+    color: #ffffff;
+    display: block;
+    float: left;
+    width: 12%;
+    line-height: 58/100rem;
+    font-size: 28/100rem;
+    text-align: center;
+  }
+  .meeting-query-inputbox {
+    background-color: #ffffff;
+    float: left;
+    width: 80%;
+    height: 58/100rem;
+    -moz-border-radius: 8/100rem;
+    -webkit-border-radius: 8/100rem;
+    border-radius: 8/100rem;
+  }
+  .meeting-icon-sousuo {
+    display: block;
+    line-height: 58/100rem;
+    font-size: 36/100rem;
+    text-align: center;
+    float: left;
+    margin-left: 10/100rem;
+    margin-right: 6/100rem;
+    color: #999999;
+  }
+  .meeting-icon-guanbi {
+    display: block;
+    line-height: 58/100rem;
+    font-size: 28/100rem;
+    text-align: center;
+    float: right;
+    margin-left: 14/100rem;
+    margin-right: 14/100rem;
+    color: #999999;
+  }
+  .meeting-query-input {
+    display: block;
+    float: left;
+    border: none;
+    height: 58/100rem;
+    font-size: 28/100rem;
+    width: 370/100rem;
+  }
+  .meeting-query-list {
+    font-family: "黑体";
+    display: block;
+    margin-top: 110/100rem;
+    border-top: 2/100rem solid #DDDDDD;
+    border-bottom: 2/100rem solid #DDDDDD;
+  }
+
+  .meeting-query-list li {
+    background-color: #ffffff;
+    display: block;
+    width: 100%;
+
+  }
+
+  .item-con {
+    margin-left: 20/100rem;
+    padding: 22/100rem 20/100rem 22/100rem 0/100rem;
+    border-bottom: 2/100rem solid #DDDDDD;
+  }
+  .c-top {
+  }
+  .i-c-title {
+    font-size: 32/100rem;
+    color: @color-333333;
+  }
+  .c-subtitle {
+    margin-top: 8/100rem;
+  }
+  .i-c-subtitle {
+    font-size: 22/100rem;
+    color: @color-999999;
+  }
+
+  .c-bottom {
+    margin-top: 21/100rem;
+    font-size: 22/100rem;
+  }
+  .c-bottom .iconfont {
+    font-size: 22/100rem;
+    color: @color-22C4F3;
+  }
+  .i-r-tip {
+    -moz-border-radius: 30/100rem;
+    -webkit-border-radius: 30/100rem;
+    border-radius: 30/100rem;
+    padding: 2/100rem 20/100rem  0/100rem 20/100rem;
+    font-size: 22/100rem;
+    color: @color-22C4F3;
+    border: 1px solid @color-22C4F3;
+  }
+  .i-r-tip-full {
+    -moz-border-radius: 30/100rem;
+    -webkit-border-radius: 30/100rem;
+    padding: 2/100rem 20/100rem  0/100rem 20/100rem;
+    font-size: 22/100rem;
+    color: @color-999999;
+    border-radius: 30/100rem;
+    border: 1px solid @color-999999;
+  }
+
+  .meeting-list-title {
+    color: #333333;
+    font-size: 32/100rem;
+    padding-top: 25/100rem;
+    margin-left: 36/100rem;
+  }
+  .meeting-list-address {
+    font-size: 24/100rem;
+    color: #999999;
+    margin-left: 36/100rem;
+  }
+  .meeting-list-abstract {
+    font-size: 24/100rem;
+    line-height: 48/100rem;
+    color: #999999;
+    margin-left: 36/100rem;
+    margin-top: 18/100rem;
+    padding-bottom: 11/100rem;
+  }
+  .meeting-list-abstract i {
+    margin-right: 12/100rem;
+    font-size: 24/100rem;
+    color: #22C4F3;
+  }
+  .meeting-list-abstract span {
+    margin-right: 24/100rem;
+  }
+  .meeting-list-status {
+    display: block;
+    float: right;
+    color: #22C4F3;
+    -moz-border-radius: 20/100rem;
+    -webkit-border-radius: 20/100rem;
+    border-radius: 20/100rem;
+    font-size: 24/100rem;
+    line-height: 36/100rem;
+    border: solid 2/100rem;
+    border-color: #22C4F3;
+    margin-top: 31/100rem;
+    margin-right: 20/100rem;
+    padding-left: 20/100rem;
+    padding-right: 20/100rem;
+  }
+  .meeting-list-status-full {
+    display: block;
+    float: right;
+    color: #999999;
+    -moz-border-radius: 20/100rem;
+    -webkit-border-radius: 20/100rem;
+    border-radius: 20/100rem;
+    font-size: 24/100rem;
+    line-height: 36/100rem;
+    border: solid 2/100rem;
+    border-color: #999999;
+    margin-top: 31/100rem;
+    margin-right: 20/100rem;
+    padding-left: 20/100rem;
+    padding-right: 20/100rem;
+  }
+  .meeting-query-button {
+    display: block;
+    float: right;
+    width: 96/100rem;
+    line-height: 38/100rem;
+    font-size: 24/100rem;
+    text-align: center;
+    border-left: 2/100rem solid @color-999999;
+    margin-top: 15/100rem;
+  }
+  .meeting-icon-sousuo-blue {
+    display: block;
+    color: #22C4F3;
+    text-align: center;
+    line-height: 38/100rem;
+    font-size: 32/100rem;
+  }
+  .meeting-query-menu {
+    display: block;
+    color: #dddddd;
+    text-align: center;
+    padding-left: 58/100rem;
+    line-height: 58/100rem;
+    font-size: 32/100rem;
+    vertical-align: middle;
+    margin-top: -4/100rem;
+  }
+  .meeting-query-menu span {
+    vertical-align: middle;
+  }
+
+  .meeting-icon-xiajiantou {
+    display: inline-block;
+    color: #999999;
+    line-height: 62/100rem;
+    font-size: 36/100rem;
+    margin-left: 18/100rem;
+    vertical-align: middle;
+  }
+
+  .mbq-box {
+    width: 460/100rem;
+    margin: 10/100rem auto;
+  }
+  .mbq-list {
+    position: relative;
+  }
+  .mbq-list:after, .mbd-list:before {
+    border: solid transparent;
+    content: ' ';
+    height: 0;
+    position: absolute;
+    width: 0;
+  }
+  .mbq-list:after {
+    border-width: 10/100rem;
+    border-bottom-color: #ffffff;
+    top: -17/100rem;
+    left: 50%;
+  }
+  .i-list {
+    border-radius: 5/100rem;
+    padding: 15/100rem;
+    background: #ffffff;
+    opacity: 0.95;
+  }
+  .i-list a {
+    display: block;
+    text-align: left;
+    padding-left: 25/100rem;
+    height: 70/100rem;
+    line-height: 70/100rem;
+    background-color: #fff;
+    color: @color-999999;
+    font-size: 28/100rem;
+  }
+  .i-list a.cur {
+    color: @color-22C4F3;
+    background-color: #f4f4f4;
+  }
+
+  .mt-pop {
+    width: 100%;
+  }
+
+  .mt-con {
+    position: fixed;
+    top: 0rem;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .mt-mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .mt-pop-top {
+    top: 90/100rem;
+  }
+
+}
+
+//签到页
+.meeting-sign {
+  font-family: "黑体";
+  .meeting-sign-head {
+
+  }
+  .meeting-sign-head-info {
+    display: block;
+    margin-top: 15/100rem;
+    margin-bottom: 15/100rem;
+    border-left: solid 8/100rem;
+    border-color: #23C4F3;
+    padding-left: 25/100rem;
+  }
+  .meeting-sign-head-info span {
+    font-size: 28/100rem;
+    color: #999999;
+  }
+  .meeting-sign-content-list {
+    background-color: #ffffff;
+  }
+  .meeting-sign-content-list li {
+    width: 100%;
+    background-color: #ffffff;
+  }
+  .meeting-sign-content-list ul {
+    border-top: solid 2/100rem;
+    border-bottom: solid 2/100rem;
+    border-color: #DDDDDD;
+  }
+
+  .mscl-con {
+    margin-left: 20/100rem;
+    border-bottom: 2/100rem solid #DDDDDD;
+  }
+  .meeting-sign-info-title {
+    width: 28%;
+    display: block;
+    float: left;
+
+    font-size: 28/100rem;
+    line-height: 90/100rem;
+    color: #333333;
+  }
+  .meeting-sign-info-content {
+    width: 72%;
+    display: block;
+    float: left;
+    padding-left: 30/100rem;
+    font-size: 28/100rem;
+    line-height: 90/100rem;
+    color: #666666;
+  }
+  .con-sp {
+    line-height: 36/100rem;
+    margin: 28/100rem 0;
+  }
+  .meeting-list-line {
+    width: 100%;
+    margin-left: 20/100rem;
+    border-bottom: solid 2/100rem;
+    border-color: #F4F4F4;
+  }
+  .meeting-sign-info-status {
+    display: block;
+    float: left;
+    color: #22C4F3;
+    -moz-border-radius: 20/100rem;
+    -webkit-border-radius: 20/100rem;
+    border-radius: 20/100rem;
+    font-size: 24/100rem;
+    line-height: 36/100rem;
+    border: solid 2/100rem;
+    border-color: #22C4F3;
+    margin-top: 24/100rem;
+    padding-left: 32/100rem;
+    padding-right: 28/100rem;
+  }
+  .meeting-sign-my-info {
+    display: block;
+    float: left;
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 20/100rem;
+    border-top: solid 2/100rem;
+    border-bottom: solid 2/100rem;
+    border-color: #DDDDDD;
+  }
+  .meeting-sign-button {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+//提示页面
+
+// 扫码签到无相关信息提示页面
+.scan-code {
+  font-family: '黑体';
+  .sc-con {
+    margin-top: 30%;
+  }
+  .sc-img {
+    width: 160/100rem;
+    margin: 0 auto;
+  }
+  .sc-text {
+    width: 55%;
+    margin: 20/100rem auto 30/100rem auto;
+    text-align: center;
+    color: @color-333333;
+    font-size: 32/100rem;
+    line-height: 40/100rem;
+  }
+  .sc-btn {
+    width: 40%;
+    margin: 40/100rem auto 30/100rem;
+    text-align: center;
+  }
+}
+
+//签到成功提示页面
+.mt-sign-tips {
+  font-family: '黑体';
+  .top {
+    background: #ffffff;
+    padding: 52/100rem 66/100rem 40/100rem 66/100rem;
+    border-radius: 12/100rem;
+  }
+  .sign-img {
+    width: 200/100rem;
+    margin: 0 auto;
+  }
+  .sign-con {
+    font-size: 32/100rem;
+    color: @color-333333;
+    margin-top: 25/100rem;
+  }
+  .list {
+    background: #ffffff;
+    padding: 0/100rem 0;
+    border-radius: 12/100rem;
+  }
+  .list .item {
+    padding: 26/100rem 25/100rem 28/100rem 25/100rem;
+    font-size: 28/100rem;
+    text-align: left;
+  }
+  .i-fl {
+    color: @color-333333;
+    width: 30%
+  }
+  .i-fr {
+    color: @color-666666;
+  }
+  .i-border-bottom {
+    border-bottom: 2/100rem solid #DDDDDD;
+  }
+  .btn-b-radius {
+    border-radius: 10/100rem;
+  }
+  .list .item-btn {
+    padding: 10/100rem 25/100rem  25/100rem 25/100rem;
+  }
+  .list .item-btn .mt-button {
+    display: block;
+    background: #22c4f3;
+    width: 100%;
+    height: 0.65rem;
+    text-align: center;
+    line-height: 0.65rem;
+    color: #ffffff;
+    font-size: 0.32rem;
+  }
+  .list-border-top {
+    border-top: 4/100rem dotted #DDDDDD;
+  }
+}
+
+//选人组件
+
+//弹窗遮罩
+.meeting-backdrop {
+  top: 0;
+  bottom: 0;
+  background: #F4F4F4;
+  z-index: 2;
+}
+
+.mt-clearfix {
+  clear: both;
+  font-size: 0;
+  line-height: 0;
+  height: 0;
+}
+
+.mt-fl {
+  float: left;
+}
+
+.mt-fr {
+  float: right;
+}
+
+.mt-20 {
+  margin-top: 20/100rem;
+}
+
+.mt-button {
+  display: block;
+  background: @color-22C4F3;
+  width: 100%;
+  height: 90/100rem;
+  text-align: center;
+  line-height: 90/100rem;
+  color: #ffffff;
+  font-size: 32/100rem;
+}
+
+.mt-btn-item {
+  width: 50%;
+  float: left;
+}
+
+.mt-btn-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.mtbtngray {
+  background: @color-999999;
+  color: #ffffff;
+}
+
+.mtbtnorange {
+  background: @color-ffa257;
+  color: #ffffff;
+}
+
+.mtbtnblack {
+  background: @color-464646;
+  color: #ffffff;
+}
+
+.mt-btn-tip {
+  display: block;
+  background: @color-22C4F3;
+  width: 100%;
+  height: 65/100rem;
+  text-align: center;
+  line-height: 65/100rem;
+  color: #ffffff;
+  font-size: 28/100rem;
+  border-radius: 10/100rem;
+  margin-bottom: 20/100rem;
+}
+
+.mt-btn-tip-gray {
+  background: transparent;
+  color: @color-666666;
+  border: 1px solid #464646;
+}
+.mt-btn-tip-gray:hover{
+  color: @color-666666;
+}
+
+.mtbnone {
+  border: 0 solid #ffffff !important;
+}
+
+.mtborbottom {
+  border-bottom: 2/100rem solid #DDDDDD;
+}
+
+.mbnone {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.mt6 {
+  margin-top: 10/100rem;
+}
+
+.mt-icon-none {
+  color: #ffffff !important;
+}
+
+.mt-ml-25 {
+  margin-left: 25/100rem;
+}
+
+.mdp110 {
+  padding-bottom: 110/100rem
+}
+
+.mdp20 {
+  padding-bottom: 20/100rem
+}
+
+.mdp90 {
+  padding-bottom: 90/100rem
+}
+
+.meeting-warn-box {
+  width: 524/100rem;
+  margin: auto;
+  border-radius: 20/100rem;
+  background-color: #ffffff;
+  .warn_txt {
+    font-size: 32/100rem;
+    color: #333333;
+    text-align: center;
+  }
+  .v-btn {
+    font-size: 28/100rem;
+    width: 240/100rem;
+    height: 65/100rem;
+    border-radius: 10/100rem;
+    margin-bottom: 22/100rem;
+  }
+
+  .v-btn-ok {
+    font-size: 28/100rem;
+    width: 450/100rem;
+    height: 65/100rem;
+    border-radius: 10/100rem;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 22/100rem;
+    text-align: center;
+    line-height: 65/100rem;
+  }
+
+  .cancel-btn {
+    background-color: #464646;
+    color: #FFFFFF;
+  }
+  .ok-btn {
+    background-color: #22C4F3;
+    color: #FFFFFF;
+  }
+}
+
+.meeting-tipmsg {
+  font-size: 24/100rem;
+  color: #999999;
+}

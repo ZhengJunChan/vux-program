@@ -2,11 +2,27 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    dpr = 1,
+                    scale = 1 / dpr;
+            var metaEl = doc.createElement('meta');
+            metaEl.name = "viewport";
+            metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ',minimum-scale=' + scale;
+            docEl.firstElementChild.appendChild(metaEl);
+            var recalc = function () {
+                var deviceWidth = docEl.clientWidth;
+                if (deviceWidth > 640) deviceWidth = 640;
+                docEl.style.fontSize = deviceWidth / 6.4 + 'px';
+            };
+            recalc();
+        })(document, window);
+    </script>
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-    <title>yyt</title>
+    <title>program from ZhengJunChan</title>
   </head>
   <body>
-    <div id="app-box"></div>
-    <!-- built files will be auto injected -->
+    <div id="chan"></div>
   </body>
 </html>

@@ -4,15 +4,24 @@
  */
 
 import Vue from 'vue';
+import Router from 'vue-router';
 import FastClick from 'fastclick';
 
 import App from '@/moduls';
-
-import router from '@/router';
+import routers from '@/router';
 
 FastClick.attach(document.body);
 
 Vue.config.productionTip = false;
+
+/* 路由配置 */
+Vue.use(Router);
+
+const router = new Router({
+    mode: 'history',
+    routes: routers
+});
+/* / 路由配置 */
 
 /* 项目启动 */
 new Vue({

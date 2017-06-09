@@ -1,7 +1,7 @@
 <template>
   <div class="pc_module">
-  	pc
-    <!-- <router-view></router-view> -->
+  	pcewrc 3
+    <router-view></router-view>
   </div>
 </template>
 

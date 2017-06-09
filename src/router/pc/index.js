@@ -7,6 +7,4 @@ const pc = {
     }]
 };
 
-console.log('pc');
-
 export default pc;

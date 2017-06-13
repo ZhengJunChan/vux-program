@@ -1,5 +1,15 @@
 @import 'configs.less';
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 html {
+    // -ms-touch-action: none;
     font-size: @font-size-root;
 }
 
@@ -19,28 +29,26 @@ body {
 
 @media screen and (max-width: 321px) {
     body {
-        font-size: @font-size-root;
+        font-size: @font-size-base + 2;
     }
 }
 
 @media screen and (min-width: 321px) and (max-width: 400px) {
     body {
-        font-size: @font-size-root + 1;
+        font-size: @font-size-base + 3;
     }
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 400px) and (max-width: 1024px) {
     body {
-        font-size: @font-size-root + 2;
+        font-size: @font-size-base + 4;
     }
 }
 
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: @font-size-base;
+    }
 }
 
 table {

@@ -1,13 +1,5 @@
-import CCell from './c-cell';
-import Tag from './tag';
-import LinkArrow from './link-arrow';
-import DiscussList from './discuss/list.vue';
-import HeaderImg from './header-img';
+import Scroller from './scroller';
 
 export {
-    CCell,
-    Tag,
-    LinkArrow,
-    DiscussList,
-    HeaderImg
+    Scroller
 };

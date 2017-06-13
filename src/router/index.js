@@ -4,7 +4,8 @@
  */
 
 import pc from './pc';
+import component from './component';
 
-const routers = [pc];
+const routers = [pc, component];
 
 export default routers;

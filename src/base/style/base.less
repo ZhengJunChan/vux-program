@@ -1,5 +1,4 @@
 @import 'configs.less';
-
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -77,4 +76,15 @@ a {
 
 pre {
     white-space: pre-wrap;
+}
+
+.clear_float {
+    zoom: 1;
+    &:after {
+        display: block;
+        clear: both;
+        content: "";
+        visibility: hidden;
+        height: 0
+    }
 }

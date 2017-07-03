@@ -1,16 +1,12 @@
 <template>
-    <div class="swiper_page">
-    <swiper :list="demo01_list" :aspect-ratio="200/200"></swiper>
-      <!--   <swiper :aspect-ratio="300/800" @on-index-change="onSwiperItemIndexChange" v-model="swiperItemIndex">
-      <swiper-item class="swiper-demo-img" v-for="(item, index) in demo04_list" :key="index">
-        <img :src="item">
-      </swiper-item> -->
-    </swiper>
-    </div>
+<div class="swiper_page">
+    <swiper :aspect-ratio="200/200" :list="demo01_list"></swiper>
+</div>
 </template>
 
 <script>
-import { Swiper, SwiperItem } from 'vux'
+import { SwiperItem } from 'vux';
+import { Swiper } from '@/components';
 
 const baseList = [{
   url: 'javascript:',
@@ -36,6 +32,50 @@ export default {
     	return {
     		demo01_list: baseList
     	}
+    },
+    mounted() {
+      //   var test = {};
+      // function Person(){
+      //   this.height = 60;
+      // }
+      // Person.prototype.name = "Nicholas";
+      // Person.prototype.age = 29;
+      // Person.prototype.job = "Software Engineer";
+      // Person.prototype.sayName = function(){
+      //     alert(this.height);
+      // };
+      // Person.sex = 'girl';
+
+      // var person1 = new Person();
+      // var person2 = new Person();
+
+      // person1.sayName();
+      // // console.log(test);
+      // console.log(person1);
+
+      // person1.name = "Greg";
+      // alert(Person.hasOwnProperty("name"));//false
+      // alert("name" in Person);//true
+
+      // alert(person1.name);//"Greg"
+      // alert(person1.hasOwnProperty("name"));//true
+      // alert("name" in person1);//true
+
+      // delete person1.name;
+      // alert(person1.name);//"Nicholas"
+      // alert(person1.hasOwnProperty("name"));//false
+      // alert("name" in person1);//true
+        // var a = 5;
+        // function fn(){
+        //     a = 0 ;
+        //     alert(a);
+        //     var a;
+        //     // alert(this.a)
+        //     console.log(this);
+        // }
+
+        // fn();
+        // new fn();
     }
 };
 </script>

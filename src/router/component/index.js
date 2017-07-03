@@ -8,6 +8,9 @@ const component = {
         path: 'swiper',
         component: resolve => require(['@/moduls/component/swiper'], resolve)
     }, {
+        path: 'pagination',
+        component: resolve => require(['@/moduls/component/pagination'], resolve)
+    }, {
         path: 'scroller',
         component: resolve => require(['@/moduls/component/scroller'], resolve)
     }]

@@ -1,12 +1,11 @@
 <template>
 <div class="pagination_page">
-    <pagination :pagination="pagination" :callback="loadData" :options="paginationOptions"></pagination>
+    <pagination :pagination="pagination" :configs="paginationConfigs" :callback="loadData"></pagination>
 </div>
 </template>
 
 <script>
 import { Pagination } from '@/components';
-console.log(Pagination)
 
 export default {
     components: {
@@ -15,25 +14,23 @@ export default {
     data() {
         return {
             pagination: {
-                total: 0,
-                per_page: 12, // required 
-                current_page: 1, // required 
-                last_page: 2, // required 
-                from: 1,
-                to: 12 // required 
+                total: 321, // 总页数
+                per_page: 24, // 每页显示条数
+                current_page: 1, // 当前页
+                last_page: 321 // 最后一页
             },
-            paginationOptions: {
-                offset: 4,
-                previousText: 'Prev',
-                nextText: 'Next',
-                alwaysShowPrevNext: true
+            paginationConfigs: {
+                offset: 2, // 左右偏离多少个页面按钮
+                previousText: '上一页', // 上一页按钮显示文字
+                nextText: '下一页', // 下一页按钮显示文字
+                alwaysShowPrevNext: true // 是否显示上一页、下一页按钮
             }
         }
     },
     mounted() {},
     methods: {
         loadData() {
-          alert('ss')
+          // alert('ss')
             // let options = {
             //     params: {
             //         paginate: this.pagination.per_page,

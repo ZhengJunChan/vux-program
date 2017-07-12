@@ -1,0 +1,57 @@
+@greyColor: #d2d2d2;
+.form_checker_component {
+    input[type="checkbox"],
+    input[type="radio"] {
+        cursor: pointer;
+        border: 1px solid #fff;
+        margin-right: 10px;
+        position: relative;
+        left: -30px;
+        &:before {
+            content: '';
+            display: block;
+            width: 14px;
+            height: 14px;
+            position: relative;
+            background-color: #fff;
+            border-radius: 4px;
+            left: 30px;
+            border: 1px solid @greyColor;
+        }
+        &:checked {
+            &:before {
+                border: 0;
+                width: 16px;
+                height: 16px;
+                background: url(./../images/icon_jubao_2.png) center no-repeat;
+            }
+        }
+    }
+    .form_checker_item_component{
+        margin-top: 10px;
+    }
+}
+
+.form_checker_item_component {
+    cursor: pointer;
+    .check_btn {
+        float: left;
+        width: 16px;
+        height: 16px;
+        margin-top: 2px;
+        font-size: 12px;
+        border-radius: 4px;
+        display: inline-block;
+        border: 1px solid @greyColor;
+    }
+    .text_slot {
+        padding-left: 10px;
+    }
+    &.selected {
+        .check_btn {
+            border: 0;
+            background: url(./../images/icon_jubao_2.png) left center no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+}

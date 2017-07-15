@@ -31,5 +31,15 @@ export default {
     post: function (url, params) {
         // return Vue.http.post(url, {emulateJSON: true}, {params: params});
         return Vue.http.post(url, {params: params});
+    },
+    /**
+     * [all 同时请求多个接口]
+     * @Author   郑君婵
+     * @DateTime 2017-06-15
+     * @param    {[arr]}   arr [需要请求的数组 eg: [this.get('https://api.github.com/xxx/1'), this.get('https://api.github.com/xxx/2')]]
+     * @return   {[type]}       [description]
+     */
+    all: function (arr) {
+        return Vue.http.all(arr);
     }
 };

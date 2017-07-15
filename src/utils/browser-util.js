@@ -1,21 +1,7 @@
 /**
- * 封装http接口
+ * 封装浏览器相关接口
  * Created by 郑君婵 on 2017-05-24
  */
-
-/**
- * [agents 可能的浏览器类型]
- * @type {Array}
- */
-// let AGENTS = [{
-//     brower: 'ios',
-//     name: 'iosWeb',
-//     test: !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
-// }, {
-//     brower: 'android',
-//     name: 'androidWeb',
-//     test: navigator.userAgent.indexOf('Android') > -1 || navigator.userAgent.indexOf('Adr') > -1
-// }];
 
 export default {
     /**

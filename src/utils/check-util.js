@@ -1,5 +1,5 @@
 /**
- * 封装http接口
+ * 封装检测接口
  * Created by 郑君婵 on 2017-05-24
  */
 
@@ -23,8 +23,5 @@ export default {
         }
 
         return true;
-    },
-    isFormApp: function () {
-        return window.location.search.includes('?app=') || window.location.search.includes('&app=');
     }
 };

@@ -1,16 +1,23 @@
 <template>
 	<content-layout margin="0 400px">
-		<div slot="left">cfedf</div>
-		<div slot="right">vcer</div>
+		<nav-list slot="left" :navs="navs"></nav-list>
+		<router-view slot="right"></router-view>
 	</content-layout>
 </template>
 
 <script>
-import { ContentLayout } from '@/components';
+import { navList } from './data.js';
+import { NavList, ContentLayout } from '@/components';
 
 export default {
     components: {
+    	NavList,
         ContentLayout
+    },
+    data() {
+    	return {
+    		navs: navList
+    	}
     }
 };
 </script>

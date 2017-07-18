@@ -1,7 +1,7 @@
 <template>
     <div class="content_layout_component" :style="setStyle()">
 	    <div class="left_layer">
-	    	<slot name="left" class="left_layer"></slot>
+	    	<slot name="left"></slot>
 	    </div>
 	    <div class="right_layer">
 	    	<slot name="right"></slot>

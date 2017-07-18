@@ -14,6 +14,7 @@ html {
 }
 
 body {
+    color: @base-color;
     position: relative;
     font: @font-size-root @font-family-sans-serif;
     background-color: @body-background;
@@ -71,8 +72,11 @@ th {
     text-align: left;
 }
 
-a {
-    text-decoration: none;
+a{
+    color: @base-color;
+    &,&:hover,&:focus{
+        text-decoration: none;
+    }
 }
 
 pre {

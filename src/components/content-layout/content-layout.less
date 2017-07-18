@@ -1,0 +1,17 @@
+@import './../../styles/configs.less';
+
+.content_layout_component {
+  display: flex;
+  padding: @normal-space 0;
+  .left_layer,
+  .right_layer {
+    background: @base-backgroud;
+  }
+  .left_layer {
+    flex: 0 0 200px;
+  }
+  .right_layer {
+    flex: 1;
+    margin-left: @normal-space;
+  }
+}

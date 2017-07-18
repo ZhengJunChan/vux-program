@@ -1,11 +1,11 @@
 import Scroller from './scroller';
-import Thinking from './thinking';
 import Swiper from './swiper';
 import Pagination from './pagination';
+import ContentLayout from './content-layout';
 
 export {
     Scroller,
-    Thinking,
     Swiper,
-    Pagination
+    Pagination,
+    ContentLayout
 };

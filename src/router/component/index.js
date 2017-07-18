@@ -13,6 +13,9 @@ const component = {
     }, {
         path: 'scroller',
         component: resolve => require(['@/moduls/component/scroller'], resolve)
+    }, {
+        path: 'content-layout',
+        component: resolve => require(['@/moduls/component/content-layout'], resolve)
     }]
 };
 

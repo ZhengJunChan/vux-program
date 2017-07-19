@@ -24,16 +24,6 @@ export default {
         auto: {
             type: Boolean,
             default: true
-        },
-        callback: {
-          type: Function,
-          required: true
-        },
-        configs: {
-          type: Object
-        },
-        size: {
-          type: String
         }
     },
     data() {

@@ -31,14 +31,14 @@ module.exports = {
         proxyTable: {
             // 以api为文件开头的后端接口，请求后：http://demoapi.yuanyintang.com/api/xxxxxx
             '/api': {
-                //target: 'http://demoapi.yuanyintang.com', // 源音塘wap内网服务器
-                target: 'http://yyt.demo.com', // 源音塘pc内网服务器
+                target: 'http://demoapi.yuanyintang.com', // 源音塘wap内网服务器
+                // target: 'http://yyt.demo.com', // 源音塘pc内网服务器
                 changeOrigin: true
             },
             // 以api为文件开头的后端接口，请求后：http://demoapi.yuanyintang.com/api/xxxxxx
             '/files': {
-                //target: 'http://demoapi.yuanyintang.com', // 源音塘wap内网服务器
-                target: 'http://yyt.demo.com', // 源音塘pc内网服务器
+                target: 'http://demoapi.yuanyintang.com', // 源音塘wap内网服务器
+                // target: 'http://yyt.demo.com', // 源音塘pc内网服务器
                 changeOrigin: true
             }
         },

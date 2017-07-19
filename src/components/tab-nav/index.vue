@@ -1,9 +1,9 @@
 <!-- [tab_nav_component 布局插件]   @Author: 郑君婵   @DateTime: 2017-07-18 -->
 <template>
     <nav class="tab_nav_component">
-        <ul>
-            <li v-for="nav in navs">
-                <router-link active-class="active" :to="nav.link" v-text="nav.name"></router-link>
+        <ul class="clear_float">
+            <li class="fl" v-for="(nav, index) in navs">
+                <a :class="{active: index===currentIndex}" v-text="nav.name" @click="tabClicked(index)"></a>
             </li>
         </ul>
     </nav>
@@ -17,17 +17,16 @@ export default {
             default: []
         }
     },
+    data() {
+        return {
+            currentIndex: 0
+        }
+    },
     methods: {
-    	setStyle () {
-    		let style = {
-    			height: this.height || '100%'
-    		};
+    	tabClicked (index) {
+    		this.currentIndex = index;
 
-    		if (this.margin) {
-    			style.margin = this.margin;
-    		}
-
-	        return style;
+            this.$emit('tab-clicked', index);
 	    }
     }
 };

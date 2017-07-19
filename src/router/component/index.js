@@ -16,6 +16,9 @@ const component = {
     }, {
         path: 'content-layout',
         component: resolve => require(['@/moduls/component/content-layout'], resolve)
+    }, {
+        path: 'upload',
+        component: resolve => require(['@/moduls/component/upload'], resolve)
     }]
 };
 

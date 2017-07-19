@@ -1,12 +1,23 @@
 @import './../../styles/configs.less';
 
 .tab_nav_component {
-  a {
-    display: block;
-    padding: 15px 20px 15px 50px;
-    &:hover{
-      color: #fff;
-      background: @red-color;
+  border-bottom: 1px solid @grey-border;
+  >ul {
+    margin: 0 30px;
+  }
+
+  li {
+    float: left;
+    &+li {
+      margin-left: 50px;
+    }
+    >a {
+      display: block;
+      height: 50px;
+      line-height: 50px;
+    }
+    .active {
+      border-bottom: 2px solid @base-color;
     }
   }
 }

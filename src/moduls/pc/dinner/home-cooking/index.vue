@@ -2,29 +2,34 @@
 	<div>
     	<tab-nav :navs="tabs" @tab-clicked="tabClicked"></tab-nav>
     	<div class="choose_panel">
-    		<div>
-		        <button @click="randomDishes">吃啥呢？</button>
-		        <button @click="resetDishes">重置</button>
-    		</div>
-    		<ul>
-    			<li v-for="dish in selectedDishes">
-    				<a v-text="dish.name" :href="dish.link" target="_blank"></a>
-    			</li>
-    		</ul>
+    		<!-- <flexbox>
+                <flexbox-item>
+                    <x-button type="primary" @click="randomDishes()">吃啥呢？</x-button>
+                </flexbox-item>
+                <flexbox-item>
+                    <x-button type="warn" @click="resetDishes()">重置</x-button>
+                </flexbox-item>
+    		</flexbox> -->
+            <button @click="randomDishes">吃啥呢？</button>
+            <button @click="resetDishes">重置</button>
+            <panel header="已选择菜品" :list="selectedDishes" type="1" v-show="selectedDishes.length"></panel>
     	</div>
     </div>
 </template>
 
 <script>
 import tabs from './data.js';
-import { XButton } from 'vux'
+import { XButton, Panel, Flexbox, FlexboxItem } from 'vux';
 import { CommonUtil } from '@/utils';
 import { TabNav } from '@/components';
 
 export default {
     components: {
     	TabNav,
-    	XButton
+    	XButton,
+        Panel,
+        Flexbox,
+        FlexboxItem
     },
     data() {
     	return {
@@ -47,17 +52,26 @@ export default {
     		}
 
     		this.currentTabIndex = index;
-    		this.resetDishes();
 	    },
 	    randomDishes () {
-	    	let index = CommonUtil.getRandom(0, this.dishes.length-1);
+            let dishes = this.dishes[this.currentTabIndex].dishes;
 
-	    	this.selectedDishes.push(this.dishes[index]);
+            if (!dishes.length) {
+                window.alert('当前无菜品可选');
+                return;
+            }
+
+            let index = CommonUtil.getRandom(0, this.dishes.length-1);
+            console.log(dishes[index])
+
+	    	this.selectedDishes.push(dishes[index]);
+
+            dishes.splice(index, 1);
 	    },
 	    resetDishes(){
 	    	this.selectedDishes = [];
 
-    		this.dishes = CommonUtil.deepCopy(this.tabs[this.currentTabIndex].dishes);
+    		this.dishes = CommonUtil.deepCopy(this.tabs);
 	    }
     }
 };

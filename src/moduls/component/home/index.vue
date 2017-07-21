@@ -4,7 +4,8 @@
             <cell title="Swiper" value="图片轮播" link="/component/swiper"></cell>
             <cell title="pagination" value="分页" link="/component/pagination"></cell>
             <cell title="content-layout" value="左右布局" link="/component/content-layout"></cell>
-            <cell title="upload" value="上传" link="/component/upload"></cell>
+            <cell title="upload-img" value="上传图片" link="/component/upload-img"></cell>
+            <cell title="upload-music" value="上传音乐" link="/component/upload-music"></cell>
         </group>
         <group title="util-api">
             <cell title="CommonUtil" link="/component/pagination"></cell>

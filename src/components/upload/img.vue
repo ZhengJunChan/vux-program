@@ -1,18 +1,15 @@
 <!-- [upload_img_component 上传图片插件]   @Author: 郑君婵   @DateTime: 2017-07-19 -->
 <template>
-    <div class="upload_img_component">
-        <!--dom结构部分-->
-        <div id="uploader-demo">
-            <!--用来存放item-->
-            <div id="fileList" class="uploader-list">
-                <div v-for="file in fileList" :id="file.id" class="file-item thumbnail">
-                    <img :src="file.src" v-if="file.src">
-                    <span v-else>不能预览</span>
-                    <div class="info" v-text="file.name"></div>
-                </div>
+    <div class="upload_component upload_img_component">
+        <!--用来存放item-->
+        <div>
+            <div v-for="file in fileList" :id="file.id" class="file-item thumbnail">
+                <img :src="file.src" v-if="file.src">
+                <span v-if="!file.src">不能预览</span>
+                <div class="info" v-text="file.name"></div>
             </div>
-            <div id="filePicker">选择图片</div>
         </div>
+        <div id="filePicker">选择图片</div>
     </div>
 </template>
 
@@ -24,6 +21,10 @@ export default {
         auto: {
             type: Boolean,
             default: true
+        },
+        limitNum: {
+            type: Number,
+            default: 1
         }
     },
     data() {
@@ -37,6 +38,7 @@ export default {
             auto: this.auto, // 选完文件后，是否自动上传。
             swf: config.swf, // swf文件路径
             server: config.imgApi, // 上传接口
+            fileNumLimit: _this.limitNum, // 限制上传文件个数
 
             // 选择文件的按钮。可选。
             // 内部根据当前运行是创建，可能是input元素，也可能是flash.
@@ -47,11 +49,19 @@ export default {
                 title: 'Images',
                 extensions: 'gif,jpg,jpeg,bmp,png',
                 mimeTypes: 'image/*'
+            },
+
+            thumb: {
+                width: 100,
+                height: 100,
+                quality: 70,
+                crop: true
             }
         });
 
         // 当有文件添加进来的时候
         uploader.on( 'fileQueued', function( file ) {
+            console.log(file);
             let thumbnailWidth = 100;
             let thumbnailHeight = 100;
 

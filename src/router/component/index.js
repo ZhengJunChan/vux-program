@@ -22,6 +22,9 @@ const component = {
     }, {
         path: 'upload-music',
         component: resolve => require(['@/moduls/component/upload/music.vue'], resolve)
+    }, {
+        path: 'fullpage',
+        component: resolve => require(['@/moduls/component/fullpage'], resolve)
     }]
 };
 

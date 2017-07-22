@@ -13,8 +13,19 @@
             docEl.firstElementChild.appendChild(metaEl);
             var recalc = function () {
                 var deviceWidth = docEl.clientWidth;
-                if (deviceWidth > 640) deviceWidth = 640;
+
+                if (deviceWidth >= 1024) {
+                    docEl.style.fontSize = '14px';
+                    console.log(docEl.style.fontSize)
+                    return;
+                }
+
+                if (deviceWidth > 640 && deviceWidth < 1024) {
+                    deviceWidth = 640;
+                }
+
                 docEl.style.fontSize = deviceWidth / 7.5 + 'px';
+                console.log(docEl.style.fontSize)
             };
             recalc();
         })(document, window);

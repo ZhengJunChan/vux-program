@@ -6,7 +6,16 @@ const config = {
     	thumbnailWidth: 100, // 缩略图的宽度
     	thumbnailHeight: 100, // 缩略图的高度
     },
-    musicApi: '/files/music/upload'  // 歌曲上传接口
+    music: {
+    	api: '/files/music/upload',  // 歌曲上传接口
+    	thumbnailWidth: 100, // 缩略图的宽度
+    	thumbnailHeight: 100, // 缩略图的高度
+    	accept: {
+            title: '支持类型wma,wav,ape,flac,mp3,m4a',
+            extensions: 'mp3,wma,wav,m4a,ape,flac',
+            mimeTypes: 'audio/*'
+        },
+    }
 };
 
 export default config;

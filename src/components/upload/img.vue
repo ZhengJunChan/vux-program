@@ -26,7 +26,7 @@ export default {
         // 限制上传的图片个数
         limitNum: {
             type: Number,
-            default: 3
+            default: 9
         }
     },
     data() {

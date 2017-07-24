@@ -1,24 +1,30 @@
 <!-- [upload_music_component 上传音乐插件]   @Author: 郑君婵   @DateTime: 2017-07-19 -->
 <template>
     <div class="upload_component upload_music_component">
-        <div id="uploader" class="wu-example">
-		    <!--用来存放文件信息-->
-		    <div id="thelist" class="uploader-list"></div>
-            <!--用来存放item-->
-            <div>
-                <div v-for="file in fileList" :id="file.id" class="item">
-                    <img :src="file.src" v-if="file.src">
-                    <span v-if="!file.src">不能预览</span>
-                    <div class="info" v-text="file.name"></div>
-
-                    <h4 class="info" v-text="file.name"></h4>
-                    <p class="state">等待上传...</p>
-                </div>
+        <!--   初始化   -->
+        <div :class="fileList.length ? 'success_box' : 'init_box'">
+            <div id="musicQueueList" class="music_query">
+                <p class="desc tip_text">（支持mp3,wma,wav,m4a,ape,flac主流音频文件，最大不超过50m，最低码率128kbps）</p>
             </div>
-		    <div class="btns">
-		        <div id="picker">选择文件</div>
-		    </div>
-		</div>
+            <div class="success_file" v-for="(file, index) in fileList">
+                <p class="file_name">
+                    上传完成：<span v-text="file.name"></span>
+                </p>
+                <p class="file_size" v-text="(file.size/1024/1024).toFixed(1) + 'bm'"></p>
+            </div>
+            <div class="upload_btn">
+                <div id="uploadMusic"></div>
+            </div>
+        </div>
+        <!--   /  初始化   -->
+
+        <!--   上传完成   -->
+        <!-- <div class="success_box"  v-show="fileList.length">
+            <div>
+                <button class="reupload" @click="reUpload">重新上传</button>
+            </div>
+        </div> -->
+        <!--   /  上传完成   -->
     </div>
 </template>
 
@@ -34,37 +40,46 @@ export default {
     },
     data() {
         return {
-            fileList: []
+            limitNum: 1,
+            fileList: [],
+            uploader: {}
+        }
+    },
+    watch: {
+        fileList: function(val) {
+            let textTip = '重新上传';
+
+            $('#uploadMusic').find('.webuploader-pick').text(textTip);
+            $('.upload_music_component>div').removeClass('init_box');
+            $('.upload_music_component>div').addClass('success_box');
         }
     },
     mounted(){
         let _this = this;
-        let uploader = WebUploader.create({
-            auto: true,
-            swf: config.swf, // swf文件路径
-            server: config.musicApi, // 上传接口
-            resize: false, // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
 
-            // 选择文件的按钮。可选。
-            // 内部根据当前运行是创建，可能是input元素，也可能是flash.
-            pick: '#picker',
-
-            // 只允许选择图片文件。
-            accept: {
-                title: 'Musics',
-                extensions: 'mp3,wma,wav,m4a,ape,flac',
-                mimeTypes: 'audio/*'
+        this.uploader = WebUploader.create({
+            auto: _this.auto,
+            swf: config.swf,
+            server: config.music.api,
+            accept: config.music.accept,
+            pick: {
+                id: '#uploadMusic',
+                label: '拖拽或点击上传音乐'
             },
+            paste: document.body,
+            disableGlobalDnd: true,   // 是否允许拖拽
+            dnd: '#musicQueueList',   // 允许拖拽事件的div
+            fileNumLimit: _this.limitNum, // 限制上传文件个数
+            fileSingleSizeLimit: 50 * 1024 * 1024 // 50 M
         });
 
         // 当有文件添加进来的时候
-        uploader.on( 'fileQueued', function( file ) {
+        this.uploader.on( 'fileQueued', function( file ) {
             console.log(file)
-            _this.fileList.push(file);
         });
 
         // 文件上传过程中创建进度条实时显示。
-        uploader.on( 'uploadProgress', function( file, percentage ) {
+        this.uploader.on( 'uploadProgress', function( file, percentage ) {
             var $li = $( '#'+file.id ),
                 $percent = $li.find('.progress .progress-bar');
 
@@ -81,21 +96,34 @@ export default {
             $percent.css( 'width', percentage * 100 + '%' );
         });
 
-        uploader.on( 'uploadSuccess', function( file ) {
-            $( '#'+file.id ).find('p.state').text('已上传');
+        this.uploader.on( 'uploadSuccess', function( file ) {
+            console.log(file)
+            _this.fileList.push(file);
         });
 
-        uploader.on( 'uploadError', function( file ) {
+        this.uploader.on( 'uploadError', function( file ) {
             $( '#'+file.id ).find('p.state').text('上传出错');
         });
 
-        uploader.on( 'uploadComplete', function( file ) {
+        this.uploader.on( 'uploadComplete', function( file ) {
             $( '#'+file.id ).find('.progress').fadeOut();
         });
+    },
+    methods: {
+        reUpload: function (uploadFile) {
+            this.uploader.removeFile(this.fileList[0], true);
+            this.fileList = [];
+
+            this.uploader.upload();
+        }
     }
 };
 </script>
 
 <style lang="less">
 @import './upload.less';
+.queueList{
+    background: red;
+    height: 100px;
+}
 </style>

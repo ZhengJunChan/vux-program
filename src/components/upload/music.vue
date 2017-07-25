@@ -97,7 +97,7 @@ export default {
         });
 
         this.uploader.on( 'uploadSuccess', function( file ) {
-            console.log(file)
+            _this.fileList = [];
             _this.fileList.push(file);
         });
 
@@ -106,7 +106,7 @@ export default {
         });
 
         this.uploader.on( 'uploadComplete', function( file ) {
-            $( '#'+file.id ).find('.progress').fadeOut();
+            _this.uploader.reset();
         });
     },
     methods: {

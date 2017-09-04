@@ -7,6 +7,7 @@
             <cell title="Swiper" value="图片轮播" link="/component/swiper"></cell>
             <cell title="upload-img" value="上传图片" link="/component/upload-img"></cell>
             <cell title="upload-music" value="上传音乐" link="/component/upload-music"></cell>
+            <cell title="粘贴复制" value="粘贴复制" link="/component/copy-paste"></cell>
         </group>
         <group title="util-api">
             <cell title="CommonUtil" link="/component/pagination"></cell>

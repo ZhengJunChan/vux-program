@@ -25,6 +25,9 @@ const component = {
     }, {
         path: 'fullpage',
         component: resolve => require(['@/moduls/component/fullpage'], resolve)
+    }, {
+        path: 'copy-paste',
+        component: resolve => require(['@/moduls/component/copy-paste'], resolve)
     }]
 };
 

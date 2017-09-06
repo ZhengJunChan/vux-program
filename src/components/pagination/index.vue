@@ -108,7 +108,7 @@ export default {
       return this.config.alwaysShowPrevNext || this.pagination.current_page < this.pagination.last_page
     },
     showFirst () {
-      return this.pagination.current_page >= this.getBtnLength()
+      return this.pagination.pageCount > this.getBtnLength() && this.pagination.currentPage >= this.getBtnLength()
     },
     showLast () {
       let to = this.getTo()
